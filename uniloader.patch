@@ -1,0 +1,16 @@
+--- a/arch/arm64/boot/dts/qcom/sm7325-nothing-spacewar.dts
++++ b/arch/arm64/boot/dts/qcom/sm7325-nothing-spacewar.dts
+@@ -74,6 +74,12 @@
+ 		};
+ 	};
+ 
++	memory {
++		ddr_device_type = <0x08>;
++		device_type = "memory";
++		reg = <0x00 0x80000000 0x00 0x39700000 0x01 0x80000000 0x01 0x00 0x00 0xc0000000 0x00 0xc0000000>;
++	};
++
+ 	reserved-memory {
+ 		#address-cells = <2>;
+ 		#size-cells = <2>;
+

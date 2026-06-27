@@ -37,6 +37,12 @@ export DEFAULT_BRANCH=danila/spacewar-testing
 echo "Default branch is $DEFAULT_BRANCH"
 git clone https://github.com/mainlining/linux.git --single-branch --branch $KERNEL_BRANCH --depth 1
 
+# Applying the memory node adding patch for uniLoader
+echo "Applying memory patch to Linux source..."
+cd linux
+git apply ../uniloader.patch
+cd ..
+
 # Copy config to pmbootstrap
 cp /home/ubuntu/pmos/nothing-spacewar.cfg ~/.config/pmbootstrap_v3.cfg
 
